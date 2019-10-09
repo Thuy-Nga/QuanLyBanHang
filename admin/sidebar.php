@@ -20,7 +20,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.php?quanly=nv&hd=lietkenv">Quản lí nhân viên</a>
                 <ul class="nav flex-column mb-2">
-                    <li class="nav-item"><a href="index.php?quanly=hieusp&hd=themhieu" style="margin-left: 35px;">Thêm nhân viên</a></li>
+                    <li class="nav-item"><a href="index.php?quanly=nv&hd=themnv" style="margin-left: 35px;">Thêm nhân viên</a></li>
                 </ul>
             </li>
         </ul>

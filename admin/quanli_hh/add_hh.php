@@ -4,7 +4,7 @@ $result = $conn->query($sql);
 $manhom = $result->fetch_assoc();
 ?>
 <div class="col-md-9 content">
-    <form action="quanli_hh/xuli.php" method="POST">
+    <form action="quanli_hh/xuli.php" method="POST" enctype = "multipart/form-data">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -57,15 +57,13 @@ $manhom = $result->fetch_assoc();
                     <td>Hình</td>
                     <td>
                         <label for="exampleFormControlFile1">Upload hình ảnh cho sản phẩm</label>
-                        <input type="file" name="hinh" class="form-control-file" name="hinhanh">
+                        <input type="file" name="hinh" class="form-control-file">
                     </td>
                 </tr>
                 <tr>
                     <td>Mô tả chi tiết</td>
                     <td>
-
                         <textarea name="motahh" id="input" class="form-control" rows="5"></textarea>
-
                     </td>
                 </tr>
                 <tr>

@@ -24,7 +24,7 @@
                     <tr>
                         <td scope="row"><?php echo $index ?></td>
                         <td><?php echo $row['TenHH'] ?></td>
-                        <td><?php echo $row['Gia'] ?></td>
+                        <td><?php echo number_format($row['Gia']) ?></td>
                         <td><?php echo $row['SoLuongHang'] ?></td>
                         <td><?php
                                     $sql_nhom = "SELECT * FROM NhomHangHoa WHERE MaNhom =" . $row['MaNhom'] . ";";
@@ -32,13 +32,13 @@
                                     $ten_nhom = $result_nhom->fetch_assoc();
                                     echo $ten_nhom['TenNhom'];
                                     ?></td>
-                        <td> <img src="../img/<?php echo $row['Hinh']  ?>" class="img-responsive hinhsp" alt="Image">
+                        <td> <img src="quanli_hh/upload_hinh/<?php echo $row['Hinh']  ?>" class="img-responsive hinhsp" alt="Image">
                         <td> <?php echo $row['MoTaHH'] ?> </td>
                         <td>
-                            <a href="index.php?quanly=nhomhh&hd=suanhom&idnhom=<?php echo $row['MaNhom']  ?>" title="Sửa">
+                            <a href="index.php?quanly=hh&hd=suahh&idhh=<?php echo $row['MSHH']  ?>" title="Sửa">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="quanli_nhomhh/xuli.php?idnhom= <?php echo $row['MaNhom'] ?>" class="btn_delete" title="Xóa">
+                            <a href="quanli_hh/xuli.php?idhh= <?php echo $row['MSHH'] ?>" class="btn_delete" title="Xóa">
                                 <i class="fas fa-trash-alt" style="color: red;"></i>
                             </a>
 

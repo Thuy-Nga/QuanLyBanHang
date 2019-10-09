@@ -18,10 +18,16 @@ if (!isset($_GET['quanly']) && !isset($_GET['hd'])) {
             include './quanli_hh/index_hh.php';
         }else if($hanhdong == 'themhh'){
             include './quanli_hh/add_hh.php';
+        }elseif($hanhdong == 'suahh'){
+            include './quanli_hh/edit_hh.php';
         }
     }elseif($quanli == 'nv'){
         if ($hanhdong == 'lietkenv') {
             include './quanli_nhanvien/index_nv.php';
+        }elseif($hanhdong == 'themnv'){
+            include './quanli_nhanvien/add_nv.php';
+        }elseif($hanhdong == 'suanv'){
+            include './quanli_nhanvien/edit_nv.php';
         }
     }
 }
