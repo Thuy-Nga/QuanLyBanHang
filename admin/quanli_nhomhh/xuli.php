@@ -11,14 +11,14 @@ if (isset($_POST['themnhom'])) {
 } else if (isset($_POST['suanhom'])) {
 
     $idnhomhh = $_GET['idnhom'];
-    $sql = "UPDATE NhomHangHoa SET TenNhom = '$nhomhh' WHERE MaNhom = $idnhomhh;";
+    $sql_update = "UPDATE NhomHangHoa SET TenNhom = '$nhomhh' WHERE MaNhom = $idnhomhh;";
     mysqli_set_charset($conn, "utf8");
-    $conn->query($sql);
+    $conn->query($sql_update);
     header('location: ../index.php?quanly=nhomhh&hd=lietkenhom');
 }else {
     $idnhomhh = $_GET['idnhom'];
-    $sql = "DELETE FROM NhomHangHoa WHERE MaNhom = $idnhomhh";
-    if($conn->query($sql)){
+    $sql_delete = "DELETE FROM NhomHangHoa WHERE MaNhom = $idnhomhh";
+    if($conn->query($sql_delete)){
         header("location: ../index.php?quanly=nhomhh&hd=lietkenhom");
     }
 }

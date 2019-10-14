@@ -24,5 +24,13 @@
                 </ul>
             </li>
         </ul>
+        <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?quanly=kh&hd=lietkekh">Quản lí khách hàng</a>
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item"><a href="index.php?quanly=kh&hd=themkh" style="margin-left: 35px;">Thêm khách hàng</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </nav>

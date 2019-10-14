@@ -29,6 +29,14 @@ if (!isset($_GET['quanly']) && !isset($_GET['hd'])) {
         }elseif($hanhdong == 'suanv'){
             include './quanli_nhanvien/edit_nv.php';
         }
+    }elseif($quanli == 'kh'){
+        if ($hanhdong == 'lietkekh') {
+            include './quanli_kh/index_kh.php';
+        }elseif($hanhdong == 'themkh'){
+            include './quanli_kh/add_kh.php';
+        }elseif($hanhdong == 'suakh'){
+            include './quanli_kh/edit_kh.php';
+        }
     }
 }
 ?>
