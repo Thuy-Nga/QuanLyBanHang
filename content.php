@@ -13,6 +13,8 @@
 		}
 		if ($tam == 'chitietsp') {
 			include 'content_right/chitietsp.php';
+		}elseif($tam == 'nhom'){
+			include 'content_right/nhom.php';
 		}elseif ($tam == 'dathang') {
 			include('modules/right/dathang.php');
 		} elseif ($tam == 'dangkymoi') {

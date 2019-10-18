@@ -1,6 +1,6 @@
 <?php
 mysqli_set_charset($conn, "utf8");
-$sql_nhom = "select * from nhomhanghoa order by MaNhom asc";
+$sql_nhom = "SELECT * FROM nhomhanghoa ORDER BY MaNhom ASC";
 $row_nhom = $conn->query($sql_nhom);
 ?>
 <div class="box_list">
@@ -11,7 +11,7 @@ $row_nhom = $conn->query($sql_nhom);
         <?php
         while ($dong_nhom = mysqli_fetch_array($row_nhom, MYSQLI_ASSOC)) {
             ?>
-            <li><a href="index.php?quanly=loaisp&id=<?php echo $dong_nhom['MaNhom'] ?>"><?php echo $dong_nhom['TenNhom'] ?></a></li>
+            <li><a href="index.php?quanly=nhom&idnhom=<?php echo $dong_nhom['MaNhom'] ?>"><?php echo $dong_nhom['TenNhom'] ?></a></li>
         <?php
         }
         ?>
@@ -25,7 +25,7 @@ $row_nhom = $conn->query($sql_nhom);
         <h3>Hàng bán chạy</h3>
     </div>
     <?php
-    $sql_banchay = $conn->query("select * from HangHoa order by MSHH desc limit 8");
+    $sql_banchay = $conn->query("SELECT * FROM HangHoa ORDER BY MSHH DESC LIMIT 5");
 
     ?>
     <ul class="hangbanchay">
